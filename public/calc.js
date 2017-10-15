@@ -24,6 +24,7 @@ $('.operator').click(function(e){
    }
 
     if(operator === '+' || operator === '-' || operator === 'X' || operator === '/') {
+      console.log("displayValue after operator: " + displayValue);
       number1 = displayValue.join("");
       displayValue = [];
       op = operator;
@@ -50,9 +51,6 @@ $('.operator').click(function(e){
       if (op === '/'){
         result = parseFloat(number1) / parseFloat(number2);
         $('#display').text(result);
-      }
-      else {
-        result = 0;
       }
     }
  });
